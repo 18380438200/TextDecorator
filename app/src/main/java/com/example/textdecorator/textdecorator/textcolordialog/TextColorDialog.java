@@ -41,7 +41,7 @@ public class TextColorDialog extends LinearLayout implements View.OnClickListene
     private int curColorPos = -1;  //当前选中颜色项
     private int curAnglePos;  //当前角度选中位置
     private int[] angles = {45,90,135,180,225,270,315,0};
-    private int[] defaultColors = {R.color.Magenta,R.color.Skyblue,R.color.orange,R.color.colorAccent};
+    private int[] defaultColors = {R.color.Magenta,R.color.orange,R.color.Skyblue};
     private int blackColor;
 
     public TextColorDialog(Context context,OnClick onClick) {
