@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_commentDialog_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_roll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/view_screen"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/commentColor">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_textcolor"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="-5dp"/>
+
+        <com.example.textdecorator.textdecorator.textcolordialog.ColorPickerView
+            android:id="@+id/color_picker_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_strokecolor_picker"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="大小"
+                        android:textColor="@color/common_title_text"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <cn.carbswang.android.numberpickerview.library.NumberPickerView
+                            android:id="@+id/pickerview_color"
+                            android:layout_width="60dp"
+                            android:layout_height="140dp"
+                            app:npv_ShowCount="5"
+                            app:npv_TextSizeNormal="16sp"
+                            app:npv_TextSizeSelected="16sp"
+                            app:npv_TextColorNormal="@color/gray"
+                            app:npv_TextColorSelected="@color/black"
+                            app:npv_WrapSelectorWheel="false"
+                            app:npv_ShowDivider="false"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/location_triangle"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.example.textdecorator.textdecorator.textcolordialog.ColorPickerView
+                    android:id="@+id/color_picker_stroke"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/transparency_slider_horizon"
+                    android:scaleType="centerCrop"/>
+
+                <com.example.textdecorator.textdecorator.textcolordialog.SmoothView
+                    android:id="@+id/smoothview"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/grediant_color" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_shadowcolor_picker"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_shadow_num"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="距离"
+                        android:textColor="@color/commentTextColor"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <cn.carbswang.android.numberpickerview.library.NumberPickerView
+                            android:id="@+id/pickerview_color_shadow"
+                            android:layout_width="60dp"
+                            android:layout_height="140dp"
+                            app:npv_ShowCount="5"
+                            app:npv_TextSizeNormal="16sp"
+                            app:npv_TextSizeSelected="16sp"
+                            app:npv_TextColorNormal="@color/gray"
+                            app:npv_TextColorSelected="@color/black"
+                            app:npv_WrapSelectorWheel="false"
+                            app:npv_ShowDivider="false"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/location_triangle"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.example.textdecorator.textdecorator.textcolordialog.ColorPickerView
+                    android:id="@+id/color_picker_shadow"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/transparency_slider_horizon"
+                    android:scaleType="centerCrop"/>
+
+                <com.example.textdecorator.textdecorator.textcolordialog.SmoothView
+                    android:id="@+id/smoothview_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/grediant_color" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RadioGroup
+                android:id="@+id/rg_textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    style="@style/accent_btn_style"
+                    android:text="内容"
+                    android:textColor="@color/common_title_text"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:id="@+id/rb_color_stroke"
+                    style="@style/accent_btn_style"
+                    android:text="描边"
+                    android:textColor="@color/common_title_text"
+                    android:button="@null"/>
+
+                <RadioButton
+                    style="@style/accent_btn_style"
+                    android:text="投影"
+                    android:textColor="@color/common_title_text"
+                    android:button="@null"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_adjust_angle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>
